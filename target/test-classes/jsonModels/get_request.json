@@ -1,0 +1,152 @@
+{
+"get_airline_1": {
+  "_id": "73dd5420-3bf9-48f3-a0b6-17cf7aa61b19",
+  "name": "American Airlines",
+  "country": "United States",
+  "logo": "https://example.com/logos/american_airlines.png",
+  "slogan": "Going for great",
+  "head_quaters": "Fort Worth, Texas",
+  "website": "https://www.aa.com",
+  "established": "1930"
+},
+  "get_airline_2": {
+    "_id": "93c10d0b-1afe-4867-b40c-bff2f2bd625f",
+    "name": "Cathay Pacific",
+    "country": "Hong Kong",
+    "logo": "https://example.com/logos/cathay_pacific.png",
+    "slogan": "Move Beyond",
+    "head_quaters": "Hong Kong International Airport",
+    "website": "https://www.cathaypacific.com",
+    "established": "1946"
+  },
+  "get_airline_3": {
+    "_id": "00cad03a-a19f-407c-a334-6fce979fd1e3",
+    "name": "Sri Lankan Airways",
+    "country": "Sri Lanka",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Qatar_Airways_Logo.svg/sri_lanka.png",
+    "slogan": "From Sri Lanka",
+    "head_quaters": "Katunayake, Sri Lanka",
+    "website": "www.srilankaaairways.com",
+    "established": "1990"
+  },
+  "get_airline_4": {
+    "_id": "56d7ffa4-84a8-4756-997c-4c8427aafed7",
+    "name": "Air France",
+    "country": "France",
+    "logo": "https://example.com/logos/air_france.png",
+    "slogan": "France is in the Air",
+    "head_quaters": "Tremblay-en-France",
+    "website": "https://www.airfrance.com",
+    "established": "1933"
+  },
+  "get_airline_5": {
+    "_id": "4b61f673-9315-4a23-98f7-31d0ce0d265a",
+    "name": "Lufthansa",
+    "country": "Germany",
+    "logo": "https://example.com/logos/lufthansa.png",
+    "slogan": "Say yes to the world",
+    "head_quaters": "Cologne, Germany",
+    "website": "https://www.lufthansa.com",
+    "established": "1953"
+  },
+  "get_passenger_1": {
+    "_id": "667ab7627ad8fb5bd04343ac",
+    "name": "Jane Doe",
+    "trips": 188,
+    "airline": [
+      {
+        "_id": "66038402-402d-4a3f-baef-7cb5f53697a8",
+        "name": "Haulmer Airlines",
+        "country": "Chile",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7vAC_SGHIGl8NuaJlU0k5pB2Pc7dK0NkD1A&s",
+        "slogan": "Haulmer",
+        "head_quaters": "Curicó, Chile",
+        "website": "www.haulmer-airlines.com",
+        "established": "2024",
+        "__v": 0
+      }
+    ],
+    "__v": 0
+  },
+
+  "get_passenger_2": {
+    "_id": "667ab7637ad8fb9a144343b1",
+    "name": "pvsunrxgcvixyhw",
+    "trips": 662,
+    "airline": [
+      {
+        "_id": "66038402-402d-4a3f-baef-7cb5f53697a8",
+        "name": "Haulmer Airlines",
+        "country": "Chile",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7vAC_SGHIGl8NuaJlU0k5pB2Pc7dK0NkD1A&s",
+        "slogan": "Haulmer",
+        "head_quaters": "Curicó, Chile",
+        "website": "www.haulmer-airlines.com",
+        "established": "2024",
+        "__v": 0
+      }
+    ],
+    "__v": 0
+  },
+
+  "get_passenger_3": {
+    "_id": "667ab7647ad8fb66b84343b6",
+    "name": "zgwlopmvajiaysw",
+    "trips": 262,
+    "airline": [
+      {
+        "_id": "66038402-402d-4a3f-baef-7cb5f53697a8",
+        "name": "Haulmer Airlines",
+        "country": "Chile",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7vAC_SGHIGl8NuaJlU0k5pB2Pc7dK0NkD1A&s",
+        "slogan": "Haulmer",
+        "head_quaters": "Curicó, Chile",
+        "website": "www.haulmer-airlines.com",
+        "established": "2024",
+        "__v": 0
+      }
+    ],
+    "__v": 0
+  },
+
+  "get_passenger_4": {
+    "_id": "667ab79e7ad8fb6bef4343d4",
+    "name": "bgsxycleudcrjaf",
+    "trips": 789,
+    "airline": [
+      {
+        "_id": "66038402-402d-4a3f-baef-7cb5f53697a8",
+        "name": "Haulmer Airlines",
+        "country": "Chile",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7vAC_SGHIGl8NuaJlU0k5pB2Pc7dK0NkD1A&s",
+        "slogan": "Haulmer",
+        "head_quaters": "Curicó, Chile",
+        "website": "www.haulmer-airlines.com",
+        "established": "2024",
+        "__v": 0
+      }
+    ],
+    "__v": 0
+  },
+
+  "get_passenger_5": {
+    "_id": "667ab7617ad8fb2f294343a7",
+    "name": "John Doe",
+    "trips": 394,
+    "airline": [
+      {
+        "_id": "66038402-402d-4a3f-baef-7cb5f53697a8",
+        "name": "Haulmer Airlines",
+        "country": "Chile",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7vAC_SGHIGl8NuaJlU0k5pB2Pc7dK0NkD1A&s",
+        "slogan": "Haulmer",
+        "head_quaters": "Curicó, Chile",
+        "website": "www.haulmer-airlines.com",
+        "established": "2024",
+        "__v": 0
+      }
+    ],
+    "__v": 0
+  }
+
+}
