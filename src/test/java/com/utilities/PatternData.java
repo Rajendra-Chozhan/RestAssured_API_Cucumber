@@ -57,7 +57,8 @@ public String validateExpectedAPI( JSONObject jsonValues, String tcName) {
 		System.out.println("The expected response is :"+Expectedresponse);
 		String response1 = localscenarioContext.getStringContext(Context.RESPONSE_BODY);
 		System.out.println("The Actual response is :"+response1);
-		return JsonUtil.CompareJson(validateExpectedAPI(jsonValues,tcName),validateResponseAPI() );
+	//	return JsonUtil.CompareJson(Expectedresponse,response1 );
+	return JsonUtil.CompareJson(validateExpectedAPI(jsonValues,tcName),validateResponseAPI() );
 	}
 	
 }

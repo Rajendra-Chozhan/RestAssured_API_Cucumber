@@ -1,4 +1,8 @@
 {
-"create_user_1":{"name":"John Doe","job":"Teacher","id":"499","createdAt":"2024-11-27T15:42:32.312Z"}
-
+"create_user_1":{
+  "id": 123456789,
+  "idBook": 97654321,
+  "firstName": "ABC",
+  "lastName": "ABC"
+}
 }

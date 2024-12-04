@@ -7,8 +7,8 @@ Feature: To implement this feature to run GET Requests
       | Field | Value  |
       | Path  | <path> |
 
-    Then User Trigger "POST" request to "Rest" API and validate response code as 201 for "<TestcaseName>"
+    Then User Trigger "POST" request to "Rest" API and validate response code as 200 for "<TestcaseName>"
     Then User Validate the GET api data for "<TestcaseName>"
     Examples:
-      | TestcaseName  | path         |
-      | create_user_1 | /api/users/1 |
+      | TestcaseName  | path            |
+      | create_user_1 | /api/v1/Authors |
