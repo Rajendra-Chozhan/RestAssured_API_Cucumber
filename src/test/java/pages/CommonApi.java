@@ -234,6 +234,17 @@ softAssert.assertAll();
 			RequestJson.deleteCharAt(RequestJson.length()-1);
 			System.out.println("The request body is "+RequestJson);
 			localScenarioContext.setStringContext(Context.REQUEST_BODY, String.valueOf(RequestJson));
+		} else if
+
+		(method.equalsIgnoreCase("PUT")) {
+			JSONObject jsonValues = JsonUtil.getJsonObject(JsonFileManager.getPayloadJsonFileReader("postrequest"));
+			String requestJson = jsonValues.get(tcName).toString();
+			requestJson = "["+requestJson+"]";
+			StringBuilder RequestJson = new StringBuilder(requestJson);
+			RequestJson.deleteCharAt(0);
+			RequestJson.deleteCharAt(RequestJson.length()-1);
+			System.out.println("The request body is "+RequestJson);
+			localScenarioContext.setStringContext(Context.REQUEST_BODY, String.valueOf(RequestJson));
 		}
 
 		baseUri1 = envPropertyManager.apiBaseURI1();

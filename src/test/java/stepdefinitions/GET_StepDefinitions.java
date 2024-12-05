@@ -1,11 +1,9 @@
 package stepdefinitions;
 
+import com.utilities.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.asserts.SoftAssert;
-
-import com.utilities.DataTableUtil;
-import com.utilities.PatternData;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -22,6 +20,7 @@ public class GET_StepDefinitions {
 	PatternData patternData;
 	protected Logger log;
 	 CommonApi commonApi  = new CommonApi();
+	 LocalScenarioContext localScenarioContext = ContextLoader.getLocalScenarioContext();
 
 public GET_StepDefinitions(){
 	super();
@@ -60,10 +59,17 @@ commonApi.triggerAPI(method, api, statusCode, statusDescription);
 }
 
 
-	@Then("User Validate the GET api data for {string}")
+	@Then("User Validate the POST api data for {string}")
 	public void validateTheGETApiDataForPOST(String tcName) throws IOException {
 		softAssert.assertTrue(patternData.compareGetPatternJsonvalueswithResponseforPOST(tcName),"Json Payload is different for "+tcName);
 		//softAssert.assertAll();}
+	}
+
+
+
+	@Then("User Validate the PUT api data for {string}")
+	public void userValidateThePUTApiDataFor(String tcName) {
+		softAssert.assertTrue(patternData.compareGetPatternJsonvalueswithResponseforPUT(tcName), "Json Payload is different for " + tcName);
 	}
 
 }

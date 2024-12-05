@@ -60,6 +60,16 @@ public String validateExpectedAPI( JSONObject jsonValues, String tcName) {
 	//	return JsonUtil.CompareJson(Expectedresponse,response1 );
 	return JsonUtil.CompareJson(validateExpectedAPI(jsonValues,tcName),validateResponseAPI() );
 	}
+
+	public boolean compareGetPatternJsonvalueswithResponseforPUT(String tcName) {
+		JSONObject jsonValues = getJsonObject(JsonFileManager.getPatternJsonFileReader("postrequest"));
+		String Expectedresponse = jsonValues.get(tcName).toString();
+		System.out.println("The expected response is :"+Expectedresponse);
+		String response1 = localscenarioContext.getStringContext(Context.RESPONSE_BODY);
+		System.out.println("The Actual response is :"+response1);
+		//	return JsonUtil.CompareJson(Expectedresponse,response1 );
+		return JsonUtil.CompareJson(validateExpectedAPI(jsonValues,tcName),validateResponseAPI() );
+	}
 	
 }
 

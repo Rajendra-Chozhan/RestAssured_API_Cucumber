@@ -1,8 +1,58 @@
 {
-"create_user_1":{
+"post_authors":{
   "id": 123456789,
   "idBook": 97654321,
   "firstName": "ABC",
   "lastName": "ABC"
-}
+},
+
+  "post_activities":{
+    "id": 6876354,
+    "title": "The Title",
+    "dueDate": "2024-12-05T05:23:53.871Z",
+    "completed": true
+  },
+  "post_books":
+  {
+    "id": 11230,
+    "title": "The History of Japan",
+    "description": "The whole history of Chine from 1900 to 2004",
+    "pageCount": 124,
+    "excerpt": "Chapter 3",
+    "publishDate": "2024-12-05T05:29:54.385Z"
+  },
+  "post_coverphotos":{
+    "id": 987543210,
+    "idBook": 65497,
+    "url": "https://fakerestapibooks.com"
+  },
+  "put_authors":
+  {
+    "id": 1,
+    "idBook": 123,
+    "firstName": "Rajendra Chozhan",
+    "lastName": "Govindaraj"
+},
+
+  "put_books":{
+    "id": 0,
+    "title": "string",
+    "description": "string",
+    "pageCount": 0,
+    "excerpt": "string",
+    "publishDate": "2024-12-05T09:56:55.05Z"
+  },
+
+  "put_activities":{
+    "id": 0,
+    "title": "string",
+    "dueDate": "2024-12-05T10:46:58.384Z",
+    "completed": true
+  },
+
+  "put_coverphoto":{
+    "id": 0,
+    "idBook": 0,
+    "url": "string"
+  }
 }

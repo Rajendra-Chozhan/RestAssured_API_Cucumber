@@ -31,4 +31,8 @@ public class POST_StepDefinitions {
     public void trigger_request_to_api_and_validate_response_code_as_and_status_description_as(String method, String api, int statusCode,String tcName) {
         commonApi.triggerAPI_POST(method, api,statusCode,tcName);
 
-    }}
+    }
+
+
+
+}
