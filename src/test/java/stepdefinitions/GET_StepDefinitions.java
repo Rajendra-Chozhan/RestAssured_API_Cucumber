@@ -72,4 +72,12 @@ commonApi.triggerAPI(method, api, statusCode, statusDescription);
 		softAssert.assertTrue(patternData.compareGetPatternJsonvalueswithResponseforPUT(tcName), "Json Payload is different for " + tcName);
 	}
 
+
+
+	@Then("Trigger {string} request to {string} API and validate response code as {int} and status Title as {} and Error description as {} for {}")
+	public void triggerRequestandValidatebadRequest(String method, String api,int statusCode, String statusTitle, String errorDescription,String tcName) {
+    commonApi.triggerandvalidateBadrequest(method,api,statusCode,statusTitle,errorDescription,tcName);
+	}
+
+
 }

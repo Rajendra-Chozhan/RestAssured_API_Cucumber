@@ -21,7 +21,7 @@ import org.testng.annotations.BeforeSuite;
 			,glue={""}
 			,plugin = {"pretty","html:target/cucumber-report/TestRunner.html"}
 			,monochrome = true
-			,tags = "@PUT_API"
+			,tags = "@GET_API_Negative"
 			)
 
 	public class TestRunner  {

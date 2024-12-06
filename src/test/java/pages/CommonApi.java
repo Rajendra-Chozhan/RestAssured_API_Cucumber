@@ -10,12 +10,14 @@ import java.util.Arrays;
 
 import io.restassured.http.ContentType;
 import io.restassured.http.Method;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 import io.restassured.response.ValidatableResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONObject;
+import org.junit.Assert;
 import org.testng.asserts.SoftAssert;
 
 import com.utilities.Context;
@@ -336,5 +338,58 @@ public Method getMethod(String methodType) {
 	return method;
 
 }
+
+
+
+
+	public void triggerandvalidateBadrequest (String method, String api, int expectedStatusCode,String statusTitle,String errorDescription,String tcName) {
+		String baseUri1 = null;
+		Response response;
+		Object requestBody = null;
+		Map<String, String> headers = localScenarioContext.getMapStringContext(Context.HEADERS);
+		Map<String, String> queryParams = localScenarioContext.getMapStringContext(Context.QUERY_PARAMS);
+		String path = localScenarioContext.getStringContext(Context.PATH);
+		Map<String, String> pathParams = localScenarioContext.getMapStringContext(Context.PATH_PARAMS);
+
+		if (method.equalsIgnoreCase("POST")) {
+			JSONObject JsonValues = JsonUtil.getJsonObject(JsonFileManager.getPatternJsonFileReader("postrequest"));
+			String requestJson = JsonUtil.getJsonString(JsonValues);
+			requestJson = "["+requestJson+"]";
+			localScenarioContext.setStringContext(Context.REQUEST_BODY, requestJson);
+		}
+
+		baseUri1 = envPropertyManager.apiBaseURI1();
+		requestBody = localScenarioContext.getStringContext(Context.REQUEST_BODY);
+
+		localScenarioContext.setStringContext(Context.METHOD,method);
+		response = restClientutil.doHttpRequestWithBodyasresponse (baseUri1, getMethod(method), headers, requestBody, path, expectedStatusCode );
+
+		String responseBody = response.body().asString();
+
+		softAssert.assertEquals(response.statusCode(), expectedStatusCode, "Status Code is Mismatched");
+		log.info("Actual Status Code is: " + response.getStatusCode()+" Expected Status Code is "+expectedStatusCode);
+		System.out.println(response.getStatusCode());
+
+		log.info("Actual Status Description is: " + response.statusLine());
+		System.out.println(response.statusLine());
+		log.info("Response is:->" + responseBody.trim());
+
+		localScenarioContext.setStringContext(Context.RESPONSE_BODY, responseBody);
+
+		JsonPath js = new JsonPath(responseBody);
+		String errordescription = js.getString("errors.id");
+		StringBuilder sb = new StringBuilder(errordescription);
+		sb.deleteCharAt(errordescription.length()-1);
+		sb.deleteCharAt(0);
+		String updatederrordescription = sb.toString();
+		System.out.println(updatederrordescription);
+		Assert.assertEquals(updatederrordescription,errorDescription);
+
+		String statustitle = js.getString("title");
+		Assert.assertEquals(statustitle,statusTitle);
+		System.out.println("The Actual status Title is "+statustitle+"The expected status Title is "+statusTitle);
+
+		System.out.println("The Actual status description is " +updatederrordescription+ "The expected status Description is " +errorDescription);
+	}
 
 }
